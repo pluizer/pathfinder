@@ -23,3 +23,7 @@ gives the following output:
 (4, 1)
 (5, 2)
 ```
+
+Or to put it in a picture:
+
+![path example](https://github.com/pluizer/pathfinder/raw/master/path.png)
