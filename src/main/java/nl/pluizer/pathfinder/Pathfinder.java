@@ -34,11 +34,25 @@ class Pathfinder {
             // For every adjacent node ...
             List<Node> adjacent = candidate.getNode().adjacent();
             adjacent.forEach((node) -> {
-                // Ignore nodes already on the processed or unreachable.
+                // Ignore nodes already processed or unreachable.
                 if (!(nodeList.contains(node) || !node.isReachable())) {
                     nodeList.add(node, candidate.getNode(), targetNode);
                 }
             });
         }
+    }
+
+    public static void main(String[] args) {
+        World world = new World(7, 5);
+        world.get(2, 1).setIsReachable(false);
+        world.get(3, 1).setIsReachable(false);
+        world.get(3, 2).setIsReachable(false);
+        world.get(3, 3).setIsReachable(false);
+        //world.get(4, 3).setIsReachable(false);
+        List<Node> path = Pathfinder.findPath(world.get(2, 2), world.get(5, 2));
+        for (Node node : path) {
+            System.out.println(node);
+        }
+
     }
 }

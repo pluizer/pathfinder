@@ -36,6 +36,7 @@ class NodeList {
     }
 
     public void add(Node node, Node parentNode, Node targetNode) {
+        System.out.println(node);
         Candidate candidate = findCandidate(node, openList);
         if (candidate == null) {
             // Add the node to the openList if it isn't already ...
@@ -64,7 +65,7 @@ class NodeList {
 
     public boolean contains(Node node) {
         Candidate candidate = findCandidate(node, closedList);
-        return candidate != null && closedList.contains(node);
+        return candidate != null && closedList.contains(candidate);
     }
 
     /**
