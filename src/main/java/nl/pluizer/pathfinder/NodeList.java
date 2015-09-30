@@ -36,7 +36,6 @@ class NodeList {
     }
 
     public void add(Node node, Node parentNode, Node targetNode) {
-        System.out.println(node);
         Candidate candidate = findCandidate(node, openList);
         if (candidate == null) {
             // Add the node to the openList if it isn't already ...
