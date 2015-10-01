@@ -25,7 +25,7 @@ class NodeList {
     public NodeList(Node startNode, Node targetNode) {
         this.startNode = startNode;
         this.targetNode = targetNode;
-        openList.add(new Candidate(startNode, startNode, targetNode));
+        openList.add(new SquareCandidate(startNode, startNode, targetNode));
     }
 
     /**
@@ -39,10 +39,10 @@ class NodeList {
         Candidate candidate = findCandidate(node, openList);
         if (candidate == null) {
             // Add the node to the openList if it isn't already ...
-            openList.add(new Candidate(node, parentNode, targetNode));
+            openList.add(new SquareCandidate(node, parentNode, targetNode));
         } else {
             // ... else check if the new node forms a better path and replace it if so.
-            Candidate newCandidate = new Candidate(node, parentNode, targetNode);
+            Candidate newCandidate = new SquareCandidate(node, parentNode, targetNode);
             if (newCandidate.gScore() < candidate.gScore()) {
                 openList.remove(candidate);
                 openList.add(newCandidate);

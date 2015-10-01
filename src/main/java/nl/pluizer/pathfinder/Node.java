@@ -1,15 +1,15 @@
 package nl.pluizer.pathfinder;
 
 import java.util.List;
-import java.util.ArrayList;
 
-public class Node {
+
+public abstract class Node {
 
     private int x, y;
 
-    private boolean isReachable = true;
-
     private World world;
+
+    private boolean isReachable = true;
 
     public Node(int x, int y, World world) {
         this.x = x;
@@ -17,24 +17,7 @@ public class Node {
         this.world = world;
     }
 
-    /**
-     * Returns a list of all nodes adjacent to this one.
-     * @return  a list of nodes adjacent to this one.
-     */
-    public List<Node> adjacent() {
-        List<Node> nodes = new ArrayList<Node>();
-        nodes.add(world.get(x - 1, y - 1));
-        nodes.add(world.get(x, y - 1));
-        nodes.add(world.get(x + 1, y - 1));
-        nodes.add(world.get(x + 1, y));
-        nodes.add(world.get(x + 1, y + 1));
-        nodes.add(world.get(x, y + 1));
-        nodes.add(world.get(x - 1, y + 1));
-        nodes.add(world.get(x - 1, y));
-        // Remove the nodes that where outside of the world, and thus returned null.
-        while(nodes.remove(null));
-        return nodes;
-    }
+    abstract List<Node> adjacent();
 
     public int getX() {
         return x;
@@ -61,5 +44,9 @@ public class Node {
     @Override
     public String toString() {
         return "(" + getX() + ", " + getY() + ")";
+    }
+
+    public World getWorld() {
+        return world;
     }
 }

@@ -2,7 +2,7 @@ A simple A* pathfinder written in Java
 
 Example usage:
 ```java
-World world = new World(7, 5);
+World world = new SquareWorld(7, 5);
 world.get(2, 1).setIsReachable(false);
 world.get(3, 1).setIsReachable(false);
 world.get(3, 2).setIsReachable(false);
