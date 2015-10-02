@@ -3,6 +3,7 @@ package nl.pluizer.pathfinder;
 import junit.framework.TestCase;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 /**
@@ -33,9 +34,11 @@ public class PathfinderTest extends TestCase {
         // Check if we got the same path:
         assertEquals("Path doesn't have the expected size", path.size(), expected.size());
         boolean equals = true;
-        for (int i=0; i<path.size(); i++) {
-            if (path.get(i).getX() != path.get(i).getX() || path.get(i).getY() != path.get(i).getY()) {
-                equals  = false;
+        Iterator<Node> itA = path.iterator(), itB = path.iterator();
+        while (itA.hasNext() && itB.hasNext()) {
+            Node a = itA.next(), b = itB.next();
+            if (a.getX() != b.getX() || b.getX() != b.getY()) {
+                equals = false;
                 break;
             }
         }
