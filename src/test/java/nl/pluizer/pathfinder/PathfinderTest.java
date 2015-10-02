@@ -41,5 +41,9 @@ public class PathfinderTest extends TestCase {
             }
         }
         assertTrue("Path is not the expected path.", equals);
+
+        // Check if we get no path when there is none:
+        path = Pathfinder.findPath(world.get(0, 0), world.get(2, 1));
+        assertNull("Got a path when there is none", path);
     }
 }
