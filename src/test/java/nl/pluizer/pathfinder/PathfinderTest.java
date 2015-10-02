@@ -37,7 +37,7 @@ public class PathfinderTest extends TestCase {
         Iterator<Node> itA = path.iterator(), itB = path.iterator();
         while (itA.hasNext() && itB.hasNext()) {
             Node a = itA.next(), b = itB.next();
-            if (a.getX() != b.getX() || b.getX() != b.getY()) {
+            if (a.getX() != b.getX() || a.getY() != b.getY()) {
                 equals = false;
                 break;
             }
