@@ -10,7 +10,7 @@ class NodeList {
 
     // A collection of candidate nodes still needed to be processed, sorted
     // by there score.
-    private SortedSet<Candidate> openList = new TreeSet<Candidate>(
+    private SortedSet<Candidate> openList = new TreeSet<>(
             (a, b) -> {
                 float aS = a.score(), bS = b.score();
                 return aS < bS ? -1 : aS == bS ? 0 : 1;
@@ -79,6 +79,7 @@ class NodeList {
         List<Node> nodes = new ArrayList<>();
         while (candidate.getNode() != startNode) {
             candidate = findCandidate(candidate.getParentNode(), closedList);
+            assert candidate != null;
             nodes.add(candidate.getNode());
         }
         // We have the path now, but backwards ...

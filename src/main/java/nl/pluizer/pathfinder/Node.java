@@ -9,7 +9,7 @@ public abstract class Node {
 
     private World world;
 
-    private boolean isReachable = true;
+    private boolean reachable = true;
 
     public Node(int x, int y, World world) {
         this.x = x;
@@ -31,14 +31,14 @@ public abstract class Node {
      * Returns if this specific node is reachable i.e. can be part of the path.
      */
     public boolean isReachable() {
-        return isReachable;
+        return reachable;
     }
 
     /**
      * Set this node to be reachable (true) or not (false).
      */
     public void setIsReachable(boolean isReachable) {
-        this.isReachable = isReachable;
+        this.reachable = isReachable;
     }
 
     @Override

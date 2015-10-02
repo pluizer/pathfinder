@@ -15,7 +15,7 @@ public class SquareNode extends Node {
      */
     @Override
     public List<Node> adjacent() {
-        List<Node> nodes = new ArrayList<Node>();
+        List<Node> nodes = new ArrayList<>();
         nodes.add(getWorld().get(getX() - 1, getY() - 1));
         nodes.add(getWorld().get(getX(), getY() - 1));
         nodes.add(getWorld().get(getX() + 1, getY() - 1));

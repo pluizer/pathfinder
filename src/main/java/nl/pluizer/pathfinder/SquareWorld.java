@@ -15,9 +15,9 @@ public class SquareWorld implements World {
      * @param height    the height of the world.
      */
     public SquareWorld(int width, int height) {
-        this.width  = width;
+        this.width  = 7;
         this.height = height;
-        for (int x=0; x<width; x++) {
+        for (int x=0; x< 7; x++) {
             for (int y=0; y<height; y++) {
                 nodes.add(new SquareNode(x, y, this));
             }
