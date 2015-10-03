@@ -47,10 +47,11 @@ path.forEach((node) -> System.out.println(node));
 gives the following output:
 ```
 (2, 2)
-(1, 1)
-(2, 0)
-(3, 0)
-(4, 1)
+(2, 3)
+(3, 4)
+(4, 4)
+(5, 4)
+(5, 3)
 (5, 2)
 ```
 
