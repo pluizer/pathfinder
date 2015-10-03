@@ -32,7 +32,7 @@ class NodeList {
      * Returns the candidate with the lowest score.
      */
     public Candidate firstCandidate() {
-        return openList.first();
+        return openList.isEmpty() ? null : openList.first();
     }
 
     public void add(Node node, Node parentNode, Node targetNode) {
