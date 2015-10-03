@@ -1,7 +1,7 @@
 package nl.pluizer.pathfinder.square;
 
+import nl.pluizer.pathfinder.Grid;
 import nl.pluizer.pathfinder.Node;
-import nl.pluizer.pathfinder.World;
 
 import java.util.List;
 import java.util.ArrayList;
@@ -14,8 +14,8 @@ import java.util.ArrayList;
  */
 public class SquareNode extends Node {
 
-    public SquareNode(int x, int y, World world) {
-        super(x, y, world);
+    public SquareNode(int x, int y, Grid grid) {
+        super(x, y, grid);
     }
 
     /**
@@ -25,14 +25,14 @@ public class SquareNode extends Node {
     @Override
     public List<Node> adjacent() {
         List<Node> nodes = new ArrayList<>();
-        nodes.add(getWorld().get(getX() - 1, getY() - 1));
-        nodes.add(getWorld().get(getX(), getY() - 1));
-        nodes.add(getWorld().get(getX() + 1, getY() - 1));
-        nodes.add(getWorld().get(getX() + 1, getY()));
-        nodes.add(getWorld().get(getX() + 1, getY() + 1));
-        nodes.add(getWorld().get(getX(), getY() + 1));
-        nodes.add(getWorld().get(getX() - 1, getY() + 1));
-        nodes.add(getWorld().get(getX() - 1, getY()));
+        nodes.add(getGrid().get(getX() - 1, getY() - 1));
+        nodes.add(getGrid().get(getX(), getY() - 1));
+        nodes.add(getGrid().get(getX() + 1, getY() - 1));
+        nodes.add(getGrid().get(getX() + 1, getY()));
+        nodes.add(getGrid().get(getX() + 1, getY() + 1));
+        nodes.add(getGrid().get(getX(), getY() + 1));
+        nodes.add(getGrid().get(getX() - 1, getY() + 1));
+        nodes.add(getGrid().get(getX() - 1, getY()));
         // Remove the nodes that where outside of the world, and thus returned null.
         while(nodes.remove(null));
         return nodes;

@@ -5,13 +5,13 @@ A simple A* pathfinder written in Java
 ### Square grids
 
 ```java
-World world = new SquareWorld(7, 5);
-world.get(2, 1).setIsReachable(false);
-world.get(3, 1).setIsReachable(false);
-world.get(3, 2).setIsReachable(false);
-world.get(3, 3).setIsReachable(false);
-world.get(4, 3).setIsReachable(false);
-List<Node> path = Pathfinder.findPath(world.get(2, 2), world.get(5, 2));
+Grid grid = new SquareGrid(7, 5);
+grid.get(2, 1).setIsReachable(false);
+grid.get(3, 1).setIsReachable(false);
+grid.get(3, 2).setIsReachable(false);
+grid.get(3, 3).setIsReachable(false);
+grid.get(4, 3).setIsReachable(false);
+List<Node> path = Pathfinder.findPath(grid.get(2, 2), grid.get(5, 2));
 path.forEach((node) -> System.out.println(node));
 ```
 
@@ -34,13 +34,13 @@ Or to put it in a picture:
 This library also included support for hexagon grids:
 
 ```java
-World world = new HexWorld(7, 5);
-world.get(2, 1).setIsReachable(false);
-world.get(3, 1).setIsReachable(false);
-world.get(3, 2).setIsReachable(false);
-world.get(3, 3).setIsReachable(false);
-world.get(4, 3).setIsReachable(false);
-List<Node> path = Pathfinder.findPath(world.get(2, 2), world.get(5, 2));
+Grid grid = new HexGrid(7, 5);
+grid.get(2, 1).setIsReachable(false);
+grid.get(3, 1).setIsReachable(false);
+grid.get(3, 2).setIsReachable(false);
+grid.get(3, 3).setIsReachable(false);
+grid.get(4, 3).setIsReachable(false);
+List<Node> path = Pathfinder.findPath(grid.get(2, 2), grid.get(5, 2));
 path.forEach((node) -> System.out.println(node));
 ```
 

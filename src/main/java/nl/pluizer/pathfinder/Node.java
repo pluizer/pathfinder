@@ -3,20 +3,20 @@ package nl.pluizer.pathfinder;
 import java.util.List;
 
 /**
- * Nodes form the intersection points of a world.
+ * Nodes form the intersection points of a grid.
  */
 public abstract class Node {
 
     private int x, y;
 
-    private World world;
+    private Grid grid;
 
     private boolean reachable = true;
 
-    public Node(int x, int y, World world) {
+    public Node(int x, int y, Grid grid) {
         this.x = x;
         this.y = y;
-        this.world = world;
+        this.grid = grid;
     }
 
     public abstract List<Node> adjacent();
@@ -48,7 +48,7 @@ public abstract class Node {
         return "(" + getX() + ", " + getY() + ")";
     }
 
-    public World getWorld() {
-        return world;
+    public Grid getGrid() {
+        return grid;
     }
 }

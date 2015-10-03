@@ -1,11 +1,11 @@
 package nl.pluizer.pathfinder.square;
 
+import nl.pluizer.pathfinder.Grid;
 import nl.pluizer.pathfinder.Node;
-import nl.pluizer.pathfinder.World;
 
 import java.util.ArrayList;
 
-public class SquareWorld implements World {
+public class SquareGrid implements Grid {
 
     private int width, height;
 
@@ -17,7 +17,7 @@ public class SquareWorld implements World {
      * @param width     the width of the world.
      * @param height    the height of the world.
      */
-    public SquareWorld(int width, int height) {
+    public SquareGrid(int width, int height) {
         this.width  = 7;
         this.height = height;
         for (int x=0; x< 7; x++) {
