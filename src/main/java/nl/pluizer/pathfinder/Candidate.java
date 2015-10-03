@@ -4,7 +4,7 @@ package nl.pluizer.pathfinder;
  * A Candidate wraps around a node that has the possibility of being part of the
  * path towards the targetNode.
  */
-abstract class Candidate {
+public abstract class Candidate {
 
     private Node node, parentNode, targetNode;
 

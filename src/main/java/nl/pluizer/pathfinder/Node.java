@@ -2,7 +2,9 @@ package nl.pluizer.pathfinder;
 
 import java.util.List;
 
-
+/**
+ * Nodes form the intersection points of a world.
+ */
 public abstract class Node {
 
     private int x, y;
@@ -17,7 +19,7 @@ public abstract class Node {
         this.world = world;
     }
 
-    abstract List<Node> adjacent();
+    public abstract List<Node> adjacent();
 
     public int getX() {
         return x;

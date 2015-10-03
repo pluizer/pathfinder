@@ -1,6 +1,9 @@
-package nl.pluizer.pathfinder;
+package nl.pluizer.pathfinder.square;
 
-class SquareCandidate extends Candidate {
+import nl.pluizer.pathfinder.Candidate;
+import nl.pluizer.pathfinder.Node;
+
+public class SquareCandidate extends Candidate {
 
     public SquareCandidate(Node node, Node parentNode, Node targetNode) {
         super(node, parentNode, targetNode);

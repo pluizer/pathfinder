@@ -1,5 +1,7 @@
 package nl.pluizer.pathfinder;
 
+import nl.pluizer.pathfinder.square.SquareCandidate;
+
 import java.util.*;
 
 /**

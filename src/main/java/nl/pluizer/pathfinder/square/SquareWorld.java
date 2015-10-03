@@ -1,4 +1,7 @@
-package nl.pluizer.pathfinder;
+package nl.pluizer.pathfinder.square;
+
+import nl.pluizer.pathfinder.Node;
+import nl.pluizer.pathfinder.World;
 
 import java.util.ArrayList;
 

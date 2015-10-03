@@ -5,7 +5,7 @@ import java.util.List;
 /**
  * A simple implementation of the A* pathfinder algorithm.
  */
-class Pathfinder {
+public class Pathfinder {
 
     /**
      * Returns a list of nodes that make up the shortest possible path
